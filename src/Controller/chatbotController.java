@@ -20,6 +20,11 @@ public class chatbotController
 		while(!userInput.equalsIgnoreCase("no u"))
 		{
 			userInput = JOptionPane.showInputDialog(null, "oof owch owie my bones");
+			
+			if (userInput.equalsIgnoreCase("PR1V4T3LY_PURPL3"))
+			{
+				JOptionPane.showMessageDialog(null, "[ACCESS GRANTED]");
+			}
 		}
 	}
 
