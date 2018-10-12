@@ -14,6 +14,11 @@ public class Chatbot
 		
 	}
 	
+	public Chatbot(String userInput)
+	{
+		
+	}
+	
 	//--[GET]--
 	public String getContent()
 	{
@@ -30,7 +35,7 @@ public class Chatbot
 		return joke;
 	}
 	
-	//--[SET]
+	//--[SET]--
 	public void setContent(String content)
 	{
 		this.content = content;
