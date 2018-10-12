@@ -11,12 +11,19 @@ public class Chatbot
 	
 	public Chatbot()
 	{
+		responseList = new ArrayList<String>();
 		
 	}
 	
 	public Chatbot(String userInput)
 	{
 		
+	}
+	
+	public String askName()
+	{
+	
+		return null;
 	}
 	
 	//--[GET]--
