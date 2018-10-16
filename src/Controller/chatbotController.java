@@ -6,7 +6,7 @@ public class chatbotController
 {
 	public chatbotController()
 	{
-	
+		
 	}
 	
 	private Chatbot simplebot;
@@ -25,12 +25,20 @@ public class chatbotController
 			{
 				JOptionPane.showMessageDialog(null, "[ACCESS GRANTED]");
 			}
+			
+			while (!userInput.equalsIgnoreCase("quit"))
+			{
+				userInput = interactWithChatbot(userInput);
+			}
 		}
 	}
 
-	public String interactWithChatbot(String userInput)
+	public String interactWithChatbot(String text)
 	{
-		return null;
+		String output = "";
+		String userResponse = JOptionPane.showInputDialog(null, "Hi whats up?");
+		output = simplebot.processText(userResponse);
+		return output;
 	}
 	
 }
