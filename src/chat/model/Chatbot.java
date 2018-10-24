@@ -55,7 +55,8 @@ public class Chatbot
 	{
 		String answer = "";
 		
-		answer += "You said: " + userText;
+		answer += "You said: \"" + userText +"\"";
+		answer += "\nChatbot says: \"" + userText  +"\"";
 		
 		return answer;
 	}
@@ -71,6 +72,25 @@ public class Chatbot
 	{
 	
 		return null;
+	}
+	
+	public boolean legitimacyChecker(String input)
+	{
+		boolean isValid = true;
+		
+		if(input == null)
+		{
+			isValid = false;
+		}
+		else if(input.length() < 2)
+		{
+			isValid = false;
+		}
+		else if (input.contains("sdf") || input.contains("jkl"))
+		{
+			isValid = false;
+		}
+		return isValid;
 	}
 	
 	//--[GET]--
