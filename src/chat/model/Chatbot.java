@@ -21,6 +21,37 @@ public class Chatbot
 		//『』
 	}
 	
+	public boolean contentChecker(String input)
+	{
+		boolean isContent = false;
+		if(input.equals(content))
+		{
+			isContent = true;
+		}
+		return isContent;
+	}
+	
+	public boolean spookyChecker(String input)
+	{
+		boolean isSpooky = false;
+		for(String currentString : spookyList)
+		{
+			if(input.equals(currentString))
+			{
+				isSpooky = true;
+			}
+		}
+		if (input.contains("Halloween"))
+		{
+			return true;
+		}
+		return isSpooky;
+	}
+	
+
+	
+
+	
 	private void buildTheLists()
 	{
 		//minimum of 15 questions, first one includes the word hello.
@@ -98,6 +129,17 @@ public class Chatbot
 	{
 		return content;
 	}
+	
+	public ArrayList<String> getSpookyList()
+	{
+		return spookyList;
+	}
+	
+	public ArrayList<String> getResponseList()
+	{
+		return responseList;
+	}
+	
 	
 	public String getCurrentUser()
 	{

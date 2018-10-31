@@ -37,6 +37,7 @@ public class chatbotController
 			}
 		}
 	}
+	
 
 	public String interactWithChatbot(String text)
 	{
@@ -44,6 +45,11 @@ public class chatbotController
 		String userResponse = JOptionPane.showInputDialog(null, "Hi whats up?");
 		output = simpleBot.processText(userResponse);
 		return output;
+	}
+	
+	public String useChatbotCheckers(String type)
+	{
+		return null;
 	}
 	
 }
