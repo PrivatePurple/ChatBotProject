@@ -48,10 +48,6 @@ public class Chatbot
 		return isSpooky;
 	}
 	
-
-	
-
-	
 	private void buildTheLists()
 	{
 		//minimum of 15 questions, first one includes the word hello.
