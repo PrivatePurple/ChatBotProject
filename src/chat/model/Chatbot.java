@@ -66,6 +66,7 @@ public class Chatbot
 		responseList.add("What's this? OwO");
 		responseList.add("I'm bored.... er, I mean, I'm having tons of fun talking to you!");
 		responseList.add("Oof");
+		responseList.add("ayy lmao");
 		
 		//minimum of 8 questions, first one says the word Halloween.
 		spookyList.add("Happy Halloween!");
@@ -76,15 +77,21 @@ public class Chatbot
 		spookyList.add("Did you hear about that skeleton that got his left arm and left leg cut off? Don't worry, he's all right now!");
 		spookyList.add("My favorite candy has to be Candy Corn... Mmm... So Sweet, so tasty...");
 		spookyList.add("What kind of person doesn't like halloween? Dressing up, free candy, what's not to like?");
+		spookyList.add("spooky");
 	}
 	
 	public String processText(String userText)
 	{
 		String answer = "";
-		
-		answer += "You said: \"" + userText +"\"";
-		answer += "\nChatbot says: \"" + userText  +"\"";
-		
+		if(contentChecker(userText))
+		{
+			answer += "You said the special words";
+		}
+		else
+		{
+			answer += "You said: \"" + userText +"\"";
+			answer += "\nChatbot says: \"" + userText  +"\"";
+		}
 		return answer;
 	}
 	
@@ -92,13 +99,18 @@ public class Chatbot
 	
 	public Chatbot(String userInput)
 	{
+		this.responseList = new ArrayList<String>();
+		this.spookyList = new ArrayList<String>();
+		this.joke = "This is a joke. Hah.";
+		this.content = userInput;
+		this.currentUser = new String("This is the default user :( boring!!!");
 		
+		buildTheLists();
 	}
 	
-	public String askName()
+	public void askName()
 	{
 	
-		return null;
 	}
 	
 	public boolean legitimacyChecker(String input)

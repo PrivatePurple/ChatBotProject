@@ -15,10 +15,7 @@ public class chatbotController
 		simpleBot = new Chatbot();
 	}
 	
-	public Chatbot getChatbot()
-	{
-		return simpleBot;
-	}
+	
 	public void start()
 	{
 		String userInput= "";
@@ -42,14 +39,27 @@ public class chatbotController
 	public String interactWithChatbot(String text)
 	{
 		String output = "";
-		String userResponse = JOptionPane.showInputDialog(null, "Hi whats up?");
+		String userResponse = JOptionPane.showInputDialog(null, text);
+		
 		output = simpleBot.processText(userResponse);
+		
 		return output;
 	}
 	
-	public String useChatbotCheckers(String type)
+	public String useChatbotCheckers(String input)
 	{
-		return null;
+		String output ="";
+		if(simpleBot.spookyChecker(input))
+		{
+			output = "Happy Halloween bois";
+		}
+		return output;
 	}
+	
+	public Chatbot getChatbot()
+	{
+		return simpleBot;
+	}
+	
 	
 }
