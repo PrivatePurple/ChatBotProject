@@ -21,15 +21,6 @@ public class Chatbot
 		//『』
 	}
 	
-	public boolean contentChecker(String input)
-	{
-		boolean isContent = false;
-		if(input.equals(content))
-		{
-			isContent = true;
-		}
-		return isContent;
-	}
 	
 	public boolean spookyChecker(String input)
 	{
@@ -173,6 +164,31 @@ public class Chatbot
 	public void setJoke(String joke)
 	{
 		this.joke = joke;
+	}
+	
+	public boolean contentChecker(String phrase)
+	{
+		boolean hasWord = false;
+		if(phrase.contains(content))
+		{
+			if (phrase.equals(content))
+			{
+				hasWord = true;
+			}
+			else
+			{
+				if(phrase.indexOf(" " + content) == phrase.length() - content.length())
+				{
+					hasWord = true;
+				}
+				else
+				if(phrase.indexOf(content + " ") == 0)
+				{
+					hasWord = true;
+				}
+			}
+		}
+		return hasWord;
 	}
 	
 }
