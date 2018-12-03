@@ -13,7 +13,7 @@ public class ChatPanel extends JPanel
 	private JTextArea chatArea;
 	private JScrollPane chatPane;
 	
-	public ChatPanel(ChatController appController)
+	public ChatPanel(chatbotController appController)
 	{
 		super();
 		
