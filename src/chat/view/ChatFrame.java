@@ -12,7 +12,7 @@ public class ChatFrame extends JFrame
 {
 		super();
 		this.appController = appController;
-		this.appPanel = appPanel;
+		this.appPanel = new ChatPanel(appController);
 		setupFrame();
 	}
 	
@@ -20,8 +20,8 @@ public class ChatFrame extends JFrame
 		{
 			this.setContentPane(appPanel);
 			this.setSize(800, 800);
-			this.setTitle("My first GUI");
-			this.setResizable(true);
+			this.setTitle("The best damn chatbot you've ever seen!");
+			this.setResizable(false);
 			this.setVisible(true);
 	}
 	
