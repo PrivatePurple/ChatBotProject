@@ -74,15 +74,21 @@ public class Chatbot
 	public String processText(String userText)
 	{
 		String answer = "";
+		
+		if (!legitimacyChecker(userText))
+		{
+			answer += "Don't send null\n";
+		}
+		else
+		{
+			answer += "You said : " + userText + "\n";
+		}
 		if(contentChecker(userText))
 		{
 			answer += "You said the special words";
 		}
-		else
-		{
-			answer += "You said: \"" + userText +"\"";
-			answer += "\nChatbot says: \"" + userText  +"\"";
-		}
+		int randomIndex = (int) (Math.random() * responseList.size());
+		answer += "Chatbot Says: " + responseList.get(randomIndex) + "\n";
 		return answer;
 	}
 	
@@ -104,19 +110,19 @@ public class Chatbot
 	
 	}
 	
-	public boolean legitimacyChecker(String input)
+	public boolean legitimacyChecker(String text)
 	{
 		boolean isValid = true;
 		
-		if(input == null)
+		if(text == null)
 		{
 			isValid = false;
 		}
-		else if(input.length() < 2)
+		else if(text.length() < 3)
 		{
 			isValid = false;
 		}
-		else if (input.contains("sdf") || input.contains("jkl"))
+		else if (text.contains("sdf") || text.contains("jkl"))
 		{
 			isValid = false;
 		}
