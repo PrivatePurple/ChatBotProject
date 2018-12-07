@@ -92,22 +92,20 @@ public class Chatbot
 		return answer;
 	}
 	
-	
-	
-	public Chatbot(String userInput)
+		public Chatbot(String userInput)
 	{
 		this.responseList = new ArrayList<String>();
 		this.spookyList = new ArrayList<String>();
 		this.joke = "This is a joke. Hah.";
 		this.content = userInput;
-		this.currentUser = new String("This is the default user :( boring!!!");
+		this.currentUser = new String("Default User");
 		
 		buildTheLists();
 	}
 	
 	public void askName()
 	{
-	
+		//Implement Later?
 	}
 	
 	public boolean legitimacyChecker(String text)

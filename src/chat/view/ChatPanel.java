@@ -34,7 +34,7 @@ public class ChatPanel extends JPanel
 		chatButton = new JButton("Chat");
 		checkerButton = new JButton("Check Text");
 		
-		chatArea = new JTextArea("Chat Area", 20, 50);
+		chatArea = new JTextArea("", 20, 50);
 		chatPane = new JScrollPane();
 		chatField = new JTextField("Talk to the bot here", 50);
 		
@@ -95,7 +95,32 @@ public class ChatPanel extends JPanel
 				chatArea.setCaretPosition(chatArea.getDocument().getLength());
 			}
 		});
+		
+		saveButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				//do something here
+			}
+		});
+		
+		loadButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				//do something here
+			}
+		});
+		
+		checkerButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				//do something here
+			}
+		});
 	}
+	
 	
 	private void setupScrollPane()
 	{
