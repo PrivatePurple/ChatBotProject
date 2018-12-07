@@ -21,6 +21,7 @@ public class ChatPanel extends JPanel
 	private JButton checkerButton;
 	private JButton loadButton;
 	private JButton saveButton;
+	private JButton resetButton;
 	
 	public ChatPanel(chatbotController appController)
 	{
@@ -33,6 +34,7 @@ public class ChatPanel extends JPanel
 		loadButton = new JButton("Load");
 		chatButton = new JButton("Chat");
 		checkerButton = new JButton("Check Text");
+		resetButton = new JButton("Reset");
 		
 		chatArea = new JTextArea("", 20, 50);
 		chatPane = new JScrollPane();
@@ -54,6 +56,7 @@ public class ChatPanel extends JPanel
 		this.add(saveButton);
 		this.add(loadButton);
 		this.add(checkerButton);
+		this.add(resetButton);
 		this.add(chatField);
 		
 	}
@@ -113,6 +116,14 @@ public class ChatPanel extends JPanel
 		});
 		
 		checkerButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				//do something here
+			}
+		});
+		
+		resetButton.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent click)
 			{
