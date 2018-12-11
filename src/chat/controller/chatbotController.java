@@ -20,7 +20,7 @@ public class chatbotController
 	
 	public void start()
 	{
-		
+		System.exit(0);
 	}
 	
 
@@ -46,5 +46,9 @@ public class chatbotController
 		return simpleBot;
 	}
 	
+	public void handleErrors(Exception error)
+	{
+		JOptionPane.showMessageDialog(appFrame, error.getMessage());
+	}
 	
 }
