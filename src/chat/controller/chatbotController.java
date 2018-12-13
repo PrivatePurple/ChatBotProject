@@ -20,7 +20,7 @@ public class chatbotController
 	
 	public void start()
 	{
-		System.exit(0);
+		
 	}
 	
 
